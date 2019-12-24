@@ -1,0 +1,31 @@
+<div class="background-container">
+  <h1> HEROES TODO </h1>
+  <div class="auth-container">
+    <p class="register"> Register </p>
+    <p class="login"> Login </p>
+  </div>
+  <div class="auth-form">
+    <%= form_with scope: :article, local: true do |form| %>
+      <div class="form-title-container"> <h3> REGISTER </h3></div>
+      <div class="form-field">
+        <%= form.label :Email %>
+        <%= email_field_tag(:email) %>
+      </div>
+      <div class="form-field">
+        <%= form.label :Password %>
+        <%= password_field_tag(:password) %>
+      </div>
+      <div class="form-field">
+        <%= form.label :ConfirmPassword %>
+        <%= password_field_tag(:password) %>
+      </div>
+      <p class="submit">
+        <%= submit_tag("Register") %>
+      </p>
+    <% end %>
+  </div>
+</div>
+
+
+
+
