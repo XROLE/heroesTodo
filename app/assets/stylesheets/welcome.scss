@@ -45,6 +45,14 @@ body {
     text-align: left;
     background-color: rgb(244,247,246);
 
+    #error_explanation {
+      text-align: center;
+    }
+    .error_list {
+      color: rgb(174, 28, 106);
+      list-style: none;
+    }
+
     .form-title-container {
       text-align: center;
     }
