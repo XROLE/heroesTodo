@@ -5,19 +5,28 @@
     <p class="login"> Login </p>
   </div>
   <div class="auth-form">
-    <%= form_with scope: :article, local: true do |form| %>
+    <%= form_with scope: :user, url: users_path, local: true do |form| %>
+      <% if @user && @user.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+            <li class="error_list"><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
       <div class="form-title-container"> <h3> REGISTER </h3></div>
       <div class="form-field">
         <%= form.label :Email %>
-        <%= email_field_tag(:email) %>
+        <%= form.email_field(:email) %>
       </div>
       <div class="form-field">
         <%= form.label :Password %>
-        <%= password_field_tag(:password) %>
+        <%= form.password_field(:password) %>
       </div>
       <div class="form-field">
         <%= form.label :ConfirmPassword %>
-        <%= password_field_tag(:password) %>
+        <%= form.password_field(:password_confirmation) %>
       </div>
       <p class="submit">
         <%= submit_tag("Register") %>
