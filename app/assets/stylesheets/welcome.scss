@@ -9,6 +9,9 @@ body {
   background-repeat: no-repeat;
   background-position: top;
 }
+.danger {
+  color:rgb(174, 28, 106);
+}
 
 .background-container {
   text-align: center;
@@ -27,12 +30,18 @@ body {
     margin: -15px auto;
 
     .register {
-      color: rgb(174, 28, 106)
+      color: rgb(174, 28, 106);
+      cursor: pointer;
     };
 
     .login {
-      color: rgb(20, 144, 103)
+      color: rgb(20, 144, 103);
+      cursor: pointer;
     }
+  }
+
+  #login_form {
+    display: none;
   }
 
   .auth-form {
