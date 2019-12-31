@@ -1,42 +1,14 @@
-<div class="background-container">
-  <h1> HEROES TODO </h1>
-  <p id=”alert” class="danger"><%= alert %></p>
-  <div class="auth-container">
-    <p class="register" id="register"> Register </p>
-    <p class="login" id="login"> Login </p>
-  </div>
-  <div class="auth-form">
-    <div id="register_form">
-    <%= form_with scope: :user, url: users_path, local: true do |form| %>
-      <% if @user && @user.errors.any? %>
-        <div id="error_explanation">
-          <ul>
-            <% @user.errors.full_messages.each do |msg| %>
-            <li class="error_list"><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div class="form-title-container"> <h3> REGISTER </h3></div>
-      <div class="form-field">
-        <%= form.label :Email %>
-        <%= form.email_field(:email) %>
-      </div>
-      <div class="form-field">
-        <%= form.label :Password %>
-        <%= form.password_field(:password) %>
-      </div>
-      <div class="form-field">
-        <%= form.label :ConfirmPassword %>
-        <%= form.password_field(:password_confirmation) %>
-      </div>
-      <p class="submit">
-        <%= submit_tag("Register") %>
-      </p>
-    <% end %>
+<div id="welcome-page-container">
+  <div class="background-container" >
+    <h1> HEROES TODO </h1>
+    <p id=”alert” class="danger"><%= alert %></p>
+    <div class="auth-container">
+      <p class="register" id="register"> Register </p>
+      <p class="login" id="login"> Login </p>
     </div>
-    <div id="login_form">
-      <%= form_with scope: :user, url: sessions_create_path, method: "get", local: true do |form| %>
+    <div class="auth-form">
+      <div id="register_form">
+      <%= form_with scope: :user, url: users_path, local: true do |form| %>
         <% if @user && @user.errors.any? %>
           <div id="error_explanation">
             <ul>
@@ -46,23 +18,51 @@
             </ul>
           </div>
         <% end %>
-        <div class="form-title-container"> <h3> LOGIN </h3></div>
+        <div class="form-title-container"> <h3> REGISTER </h3></div>
         <div class="form-field">
           <%= form.label :Email %>
-          <%= form.email_field :email, :id => "login_email" %>
+          <%= form.email_field(:email) %>
         </div>
         <div class="form-field">
           <%= form.label :Password %>
-          <%= form.password_field :password, :id => "login_pass" %>
+          <%= form.password_field(:password) %>
+        </div>
+        <div class="form-field">
+          <%= form.label :ConfirmPassword %>
+          <%= form.password_field(:password_confirmation) %>
         </div>
         <p class="submit">
           <%= submit_tag("Register") %>
         </p>
       <% end %>
+      </div>
+      <div id="login_form">
+        <%= form_with scope: :user, url: sessions_create_path, method: "get", local: true do |form| %>
+          <% if @user && @user.errors.any? %>
+            <div id="error_explanation">
+              <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                <li class="error_list"><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="form-title-container"> <h3> LOGIN </h3></div>
+          <div class="form-field">
+            <%= form.label :Email %>
+            <%= form.email_field :email, :id => "login_email" %>
+          </div>
+          <div class="form-field">
+            <%= form.label :Password %>
+            <%= form.password_field :password, :id => "login_pass" %>
+          </div>
+          <p class="submit">
+            <%= submit_tag("Register") %>
+          </p>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
-
-
 
 
