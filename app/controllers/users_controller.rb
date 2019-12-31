@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(permit_user)
 
     if @user.save
-      redirect_to @user
+      render '/todos/new'
     else
       puts @user.errors.messages
       render 'welcome/index'

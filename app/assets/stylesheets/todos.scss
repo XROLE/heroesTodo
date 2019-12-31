@@ -1,0 +1,117 @@
+// Place all the styles related to the Todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#header-section-container{
+  background-color: rgb(239,241,253);
+}
+
+.header-section {
+  width: 70%;
+  margin: 0 auto;
+
+  form {
+    padding-top: 3%;
+    padding-bottom: 2%;
+
+
+    .title-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-input-container {
+      width: 80%;
+    }
+
+    .form-title {
+      font-size: 25px;
+      font-family: Roboto;
+      font-weight: lighter;
+
+      &-b {
+        color:rgb(174,28,106);
+      }
+    }
+
+    .profile-image-container {
+      width: 11%;
+      height: auto;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    input[type="submit"]{
+      border: none;
+      color: white;
+      padding: 8px 25px;
+      margin-right: 2%;
+      font-size: 15px;
+      cursor: pointer;
+      background-color: rgb(114,227,188);
+    }
+
+    input[type="text"] {
+      font-size: 18px;
+      padding: 8px 5px;
+      border: none;
+      width: 60%;
+    }
+  }
+}
+
+.todo-list-section {
+  margin: 1% auto;
+  width: 70%;
+
+  .date-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .todo-container {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+
+    &-inner {
+      background-color: rgb(244,247,246);
+      border: none;
+      width: 85%;
+
+      p {
+        margin-top: 10px;
+        padding-left: 2%;
+      }
+
+      .todo {
+        padding-left: 7px;
+      }
+    }
+
+    &-actions {
+      display: flex;
+      justify-content: space-between;
+      width: 13%;
+
+      p {
+        border: none;
+        color: white;
+        margin-top: 5px;
+      }
+      .edit {
+        cursor: pointer;
+        padding: 9px 16px;
+        background-color: rgb(114,227,188);
+      }
+
+      .delete {
+        cursor: pointer;
+        padding: 9px 10px;
+        background-color: rgb(174,28,106);
+      }
+    }
+  }
+}

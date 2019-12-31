@@ -1,0 +1,37 @@
+<div id="todo-page-container">
+  <div id="header-section-container">
+    <div class="header-section">
+      <%= form_with scope: :todo, local: true do |form| %>
+        <div class="title-container">
+          <div class="form-input-container">
+            <p class="form-title"> HEROS <span class="form-title-b">TODO</p>
+            <%= submit_tag("ADD") %>
+            <%= form.text_field :title %>
+          </div>
+          <div class="profile-image-container">
+            <img src="https://res.cloudinary.com/xrole/image/upload/v1577661794/BlueFlameIndoors/heroUser.jpg">
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="todo-list-section">
+    <div class="date-section">
+     <p> MONDAY </p>
+     <div>
+      <p>Date:</p>
+     </div>
+    </div>
+    <%= form_with scope: :todo, local: true do |form| %>
+      <div class="todo-container">
+        <div class="todo-container-inner">
+          <p> Checkbox <span class="todo"> Leveling up on Docker </span> </p>
+          </div>
+        <div class="todo-container-actions">
+          <div class="edit"> <p>Edit</p></div>
+          <div class="delete"><p>Delete</p></div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
