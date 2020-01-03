@@ -8,8 +8,12 @@
             <%= submit_tag("ADD") %>
             <%= form.text_field :title %>
           </div>
-          <div class="profile-image-container">
+          <div class="profile-image-container" id="profile-image-container">
             <img src="https://res.cloudinary.com/xrole/image/upload/v1577661794/BlueFlameIndoors/heroUser.jpg">
+              <div class="control-container" id="control-container">
+                <p>Profile</p>
+                <p>Logout</p>
+              </div>
           </div>
         </div>
       <% end %>
