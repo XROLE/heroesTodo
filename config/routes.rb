@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
   get 'welcome/index'
 
   get 'sessions/new'
+  get 'sessions/index'
   get 'sessions/create'
   get 'sessions/destroy'
 
@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :users
   resources :todos
   resources :sessions, only: [:create, :destroy]
+  root 'welcome#index'
 end
