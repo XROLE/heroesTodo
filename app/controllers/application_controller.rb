@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
   def show_user_page
     if logged_in?
-        redirect_to "/todos/new"
+        redirect_to "/todos"
     end
   end
   end
