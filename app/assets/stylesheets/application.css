@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .link-style {
+   text-decoration: none;
+   color: black;
+ }

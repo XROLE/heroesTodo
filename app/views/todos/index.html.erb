@@ -12,7 +12,7 @@
             <img src="https://res.cloudinary.com/xrole/image/upload/v1577661794/BlueFlameIndoors/heroUser.jpg">
               <div class="control-container" id="control-container">
                 <p>Profile</p>
-                <p>Logout</p>
+                <%= link_to "Logout", 'sessions/destroy', method: 'delete', class: "link-style" %>
               </div>
           </div>
         </div>
