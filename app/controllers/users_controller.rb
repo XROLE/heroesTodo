@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(permit_user)
 
     if @user.save
-      render '/todos/index'
+      render '/todos'
     else
       puts @user.errors.messages
       render 'welcome/index'

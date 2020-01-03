@@ -1,12 +1,12 @@
 <div id="todo-page-container">
   <div id="header-section-container">
     <div class="header-section">
-      <%= form_with scope: :todo, local: true do |form| %>
+      <%= form_with scope: :todo, url: todos_path, local: true do |form| %>
         <div class="title-container">
           <div class="form-input-container">
             <p class="form-title"> HEROS <span class="form-title-b">TODO</p>
             <%= submit_tag("ADD") %>
-            <%= form.text_field :title %>
+            <%= form.text_field :todo %>
           </div>
           <div class="profile-image-container" id="profile-image-container">
             <img src="https://res.cloudinary.com/xrole/image/upload/v1577661794/BlueFlameIndoors/heroUser.jpg">
