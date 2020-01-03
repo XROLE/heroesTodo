@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   before_action :authorized
-  def new
+  def index
   end
-  def show
+  def new
   end
 end
