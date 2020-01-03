@@ -7,9 +7,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    @password = params["user"]["password"]
-    @confirm_password = params["user"]["password_confirmation"]
-
     @user = User.new(permit_user)
 
     if @user.save
