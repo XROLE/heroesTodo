@@ -1,5 +1,6 @@
 class TodosController < ApplicationController
   before_action :authorized
+  before_action :fetch_todo, only: [:destroy]
   def index
     @todos = Todo.all
   end
@@ -16,9 +17,17 @@ class TodosController < ApplicationController
     end
   end
 
+  def destroy
+    @todo.destroy
+    redirect_to '/todos'
+  end
+
   private
 
   def permit_todo
     params.require(:todo).permit(:todo)
+  end
+  def fetch_todo
+    @todo = Todo.find(params[:id])
   end
 end
