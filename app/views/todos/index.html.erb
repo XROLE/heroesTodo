@@ -34,7 +34,9 @@
           </div>
           <div class="todo-container-actions">
             <div class="edit"> <p>Edit</p></div>
-            <div class="delete"><p>Delete</p></div>
+            <div class="delete">
+              <%= link_to "Delete", todo_path(todo), method: 'delete', class: "link-style"%>
+            </div>
           </div>
         </div>
       <% end %>
