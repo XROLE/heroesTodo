@@ -26,16 +26,18 @@
       <p>Date:</p>
      </div>
     </div>
-    <%= form_with scope: :todo, local: true do |form| %>
-      <div class="todo-container">
-        <div class="todo-container-inner">
-          <p> Checkbox <span class="todo"> Leveling up on Docker </span> </p>
+    <div>
+      <% @todos.each do |todo| %>
+        <div class="todo-container">
+          <div class="todo-container-inner">
+            <p> <input type="checkbox" id= <%= todo.id %> name="vehicle" value="Bike"> <span class="todo"> <%= todo.todo %> </span> </p>
           </div>
-        <div class="todo-container-actions">
-          <div class="edit"> <p>Edit</p></div>
-          <div class="delete"><p>Delete</p></div>
+          <div class="todo-container-actions">
+            <div class="edit"> <p>Edit</p></div>
+            <div class="delete"><p>Delete</p></div>
+          </div>
         </div>
-      </div>
       <% end %>
+    </div>
   </div>
 </div>

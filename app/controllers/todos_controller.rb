@@ -1,12 +1,12 @@
 class TodosController < ApplicationController
   before_action :authorized
   def index
+    @todos = Todo.all
   end
   def new
   end
 
   def create
-
     @todo = current_user.todos.build(permit_todo)
 
     if @todo.save
