@@ -1,7 +1,7 @@
 <div id="todo-page-container">
   <div id="header-section-container">
     <div class="header-section">
-      <%= form_with scope: :todo, url: todos_path, local: true do |form| %>
+      <%= form_for @todo do |form| %>
         <div class="title-container">
           <div class="form-input-container">
             <p class="form-title"> HEROS <span class="form-title-b">TODO</p>
@@ -33,9 +33,11 @@
             <p> <input type="checkbox" id= <%= todo.id %> name="vehicle" value="Bike"> <span class="todo"> <%= todo.todo %> </span> </p>
           </div>
           <div class="todo-container-actions">
-            <div class="edit"> <p>Edit</p></div>
+            <div class="edit">
+              <%= link_to "Edit", edit_todo_path(todo), class: 'link-style' %>
+            </div>
             <div class="delete">
-              <%= link_to "Delete", todo_path(todo), method: 'delete', class: "link-style"%>
+              <%= link_to "Delete", todo_path(todo), method: 'delete', class: 'link-style' %>
             </div>
           </div>
         </div>
