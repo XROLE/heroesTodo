@@ -11,8 +11,8 @@
           <div class="profile-image-container" id="profile-image-container">
             <img src="https://res.cloudinary.com/xrole/image/upload/v1577661794/BlueFlameIndoors/heroUser.jpg">
               <div class="control-container" id="control-container">
-                <p>Profile</p>
-                <%= link_to "Logout", 'sessions/destroy', method: 'delete', class: "link-style" %>
+                <p> <%= link_to 'profile', 'users/id/edit', method: 'get', class: 'link-style space-up space-down' %> <p />
+                <%= link_to "Logout", 'sessions/destroy', method: 'delete', class: "link-style space-up" %>
               </div>
           </div>
         </div>
@@ -26,7 +26,7 @@
       <p>Date:</p>
      </div>
     </div>
-    <div>
+    <di
       <% @todos.each do |todo| %>
         <div class="todo-container">
           <div class="todo-container-inner">

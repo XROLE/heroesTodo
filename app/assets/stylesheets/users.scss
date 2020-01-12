@@ -1,3 +1,69 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#svg {
+  z-index: -1;
+}
+
+.form-container {
+ text-align: center;
+ margin-top: -10%;
+
+ #svg-container {
+   z-index: -1;
+ }
+
+ .info-container {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ form {
+   position: relative;
+    z-index: 999;
+    width: 30%;
+    padding: 1% 2% 2% 2%;
+    text-align: left;
+    margin: 0 auto;
+    background-color: rgb(244,247,246);
+  }
+
+  input[type="text"] {
+    width: 65%;
+    height: 25px;
+    border: none;
+    margin: 2% 0 0 5%;
+  }
+  input[type="file"] {
+    width: 70%;
+    height: 25px;
+    border: none;
+    margin: 10% 0 0 11%;
+  }
+
+  input[type="submit"] {
+    background-color: rgb(114,227,188);
+    color: white;
+    padding: 7px 25px;
+    border: none;
+    font-size: 12px;
+  }
+
+  #profile-image-container {
+    width: 25%;
+    margin-top: -3%;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .update {
+    margin-top: 2%;
+
+    input[type='submit'] {
+      cursor: pointer;
+    }
+  }
+}
