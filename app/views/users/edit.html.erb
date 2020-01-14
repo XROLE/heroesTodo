@@ -17,7 +17,7 @@
 
 </div>
 <div class='form-container'>
-  <%= form_with scope: :user, url: users_path, local: true do |form| %>
+  <%= form_with scope: :user, url: @user, :method => 'patch' do |form| %>
     <p>
       <%= link_to 'HT', '/todos' %>
     </p>
@@ -25,11 +25,11 @@
       <div>
         <div>
           <%= form.label :Username %>
-          <%= form.text_field :profilePix  %>
+          <%= form.text_field :user_name  %>
         </div>
         <div>
           <%= form.label :Avatar %>
-          <%= form.file_field :image  %>
+          <%= form.file_field :image %>
         </div>
       </div>
       <div id="profile-image-container">
